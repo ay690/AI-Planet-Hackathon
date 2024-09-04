@@ -16,7 +16,7 @@ const ChallengeDetails = () => {
         </div>
         <div className="space-y-4 md:space-y-8">
           <h2 className="text-xl font-semibold text-white font-poppins sm:text-2xl md:text-3xl lg:text-4xl text-start">
-            {items[id].title}
+            {items[id]?.title}
           </h2>
           <p className="text-sm font-medium text-white font-inter sm:text-base md:text-lg lg:text-xl">
             Identify the class to which each butterfly belongs to
@@ -25,7 +25,7 @@ const ChallengeDetails = () => {
         <button className="flex items-center px-4 py-2 space-x-2 text-gray-500 bg-white rounded-lg">
           <img src={graph} className="w-4 h-4 sm:w-5 sm:h-5" alt="Check Icon" />
           <span className="text-xs sm:text-sm md:text-base">
-            {items[id].type}
+            {items[id]?.type}
           </span>
         </button>
       </header>
