@@ -8,6 +8,7 @@ module.exports = {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
         mono: ["Plus Jakarta Sans", ...defaultTheme.fontFamily.mono],
         poppins: ["Poppins", ...defaultTheme.fontFamily.sans],
+        inter: ["Inter", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         "custom-light": "#003145",
