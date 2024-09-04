@@ -1,5 +1,5 @@
 import { Layout, ChallengeDetails } from "./components/index";
-import { Home, Admin, Error } from "./pages/index";
+import { Home, Admin, Error, EditChallenge } from "./pages/index";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
           <Route path="/hackathon" element={<Home />} />
           <Route path="/hackathon/admin" element={<Admin />} />
           <Route path="/hackathon/details/:id" element={<ChallengeDetails />} />
+          <Route path="/hackathon/admin/:id" element={<EditChallenge />} />
           <Route path="/hackathon/*" element={<Error />} />
         </Routes>
       </Layout>

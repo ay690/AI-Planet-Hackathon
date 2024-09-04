@@ -24,7 +24,7 @@ const ChallengeDetails = () => {
         </div>
         <button className="flex items-center space-x-2 text-gray-500 bg-white rounded-lg">
           <img src={graph} className="w-5 h-5" alt="Check Icon" />
-          <span>Easy</span>
+          <span>{items[id].type}</span>
         </button>
       </header>
       <div className="flex-1 bg-white">
@@ -34,11 +34,7 @@ const ChallengeDetails = () => {
             <div className="space-x-4">
               <button
                 className="text-white rounded-md bg-custom-green font-popins font-[600] text-[14px]"
-                onClick={() =>
-                  alert(
-                    "Functionality under construction, Thank you for understanding 🥹"
-                  )
-                }
+                onClick={() => navigate(`/hackathon/admin/${id}`)}
               >
                 Edit
               </button>

@@ -18,7 +18,17 @@ const CheckListLayout = ({ item, setSearchItem }) => (
           : e.target.checked && setSearchItem("")
       }
     />
-    <label htmlFor={item} style={{ textTransform: 'capitalize', fontWeight: "400", fontFamily: "inter", fontSize: "14px" }}>{item}</label>
+    <label
+      htmlFor={item}
+      style={{
+        textTransform: "capitalize",
+        fontWeight: "400",
+        fontFamily: "inter",
+        fontSize: "14px",
+      }}
+    >
+      {item}
+    </label>
   </div>
 );
 

@@ -52,7 +52,7 @@ const ExploreChallengesCard = ({ item }) => {
               ? "Starts in"
               : status === "Active"
               ? "Ends in"
-              : "Ended in"}
+              : "Ended on"}
           </p>
           {status !== "Past" ? (
             <div className="flex justify-center w-full space-x-2">
