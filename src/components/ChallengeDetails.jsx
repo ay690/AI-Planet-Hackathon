@@ -10,13 +10,15 @@ const ChallengeDetails = () => {
     <section className="flex flex-col h-screen">
       <header className="w-full max-w-6xl py-16 mx-auto space-y-16">
         <div className="flex items-center justify-between">
-          <button className="bg-yellow-300 rounded-md text-custom-light">
-            Starts on 17th Jun'22 09:00 PM (India Standard Time)
+          <button className="bg-yellow-300 rounded-md text-custom-light font-inter font-[600]">
+            🕛 Starts on 17th Jun'22 09:00 PM (India Standard Time)
           </button>
         </div>
         <div className="space-y-8">
-          <h1 className="text-white">{items[id].title}</h1>
-          <p className="text-white">
+          <h2 className="text-white font-poppins font-[600] text-[40px] text-start">
+            {items[id].title}
+          </h2>
+          <p className="text-white font-inter font-[500] text-[18px]">
             Identify the class to which each butterfly belongs to
           </p>
         </div>
@@ -28,20 +30,20 @@ const ChallengeDetails = () => {
       <div className="flex-1 bg-white">
         <div className="max-w-6xl py-4 mx-auto space-y-4">
           <nav className="flex items-center justify-between">
-            <h4>Overview</h4>
+            <h4 className="font-inter font-[700] text-[18px]">Overview</h4>
             <div className="space-x-4">
               <button
-                className="text-white rounded-md bg-custom-light"
+                className="text-white rounded-md bg-custom-green font-popins font-[600] text-[14px]"
                 onClick={() =>
                   alert(
-                    "Functionality under construction, Thank you for understanding🥹"
+                    "Functionality under construction, Thank you for understanding 🥹"
                   )
                 }
               >
                 Edit
               </button>
               <button
-                className="text-red-800 bg-red-100 rounded-md"
+                className="text-red-800 bg-red-100 rounded-md font-popins font-[600] text-[14px]"
                 onClick={() => {
                   items.splice(id, 1);
                   navigate("/hackathon");

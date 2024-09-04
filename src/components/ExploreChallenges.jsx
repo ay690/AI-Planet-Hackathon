@@ -18,7 +18,7 @@ const CheckListLayout = ({ item, setSearchItem }) => (
           : e.target.checked && setSearchItem("")
       }
     />
-    <label htmlFor={item}>{item}</label>
+    <label htmlFor={item} style={{ textTransform: 'capitalize', fontWeight: "400", fontFamily: "inter", fontSize: "14px" }}>{item}</label>
   </div>
 );
 
@@ -42,7 +42,9 @@ const ExploreChallenges = () => {
   return (
     <section className="bg-custom-light">
       <div className="py-16 space-y-8 bg-custom-dark">
-        <h2 className="text-white">Explore challenges</h2>
+        <h2 className="text-white font-poppins text-[28px] font-[600]">
+          Explore challenges
+        </h2>
         <div className="flex items-center justify-center space-x-2">
           <form className="w-full max-w-2xl" onSubmit={handleSubmit}>
             <input
@@ -50,13 +52,13 @@ const ExploreChallenges = () => {
               value={searchItem}
               onChange={handleChange}
               placeholder="🍳 Search"
-              className="w-full px-6 py-3 text-sm bg-white border-none rounded-sm outline-none"
+              className="w-full px-6 py-3 text-sm bg-white border-none rounded-sm outline-none font-inter font-[300] text-[18px]"
             />
           </form>
           <div className="relative">
             <button
               type="submit"
-              className="bg-white text-custom-dark"
+              className="bg-white text-custom-dark font-inter font-[400] text-[18px]"
               onClick={(e) => setIsOpen(!isOpen)}
             >
               Filter
@@ -94,8 +96,8 @@ const ExploreChallenges = () => {
       </div>
       <div
         className={`${
-          filteredItems.length && "masonry-3-col "
-        } max-w-6xl mx-auto py-16`}
+          filteredItems.length && "grid grid-cols-3 gap-5"
+        } max-w-6xl mx-auto py-16 grid grid-cols-3 gap-5`}
       >
         {filteredItems.length ? (
           filteredItems.map((item) => (

@@ -26,7 +26,7 @@ const ExploreChallengesCard = ({ item }) => {
 
   return (
     <Link to={`/hackathon/details/${item.id}`}>
-      <div className="mb-4 overflow-hidden text-center bg-white rounded-xl hover:rotate-1">
+      <div className="mb-4 overflow-hidden text-center bg-white min-h-[520px] rounded-xl hover:rotate-1">
         <img
           src={item.image}
           alt="card header"
@@ -46,8 +46,8 @@ const ExploreChallengesCard = ({ item }) => {
         </button>
 
         <div className="flex flex-col items-center p-8 space-y-4">
-          <h4>{item.title}</h4>
-          <p>
+          <h4 className="font-poppins text-[16px] font-[600]">{item.title}</h4>
+          <p className="font-poppins text-[16px] font-[500]">
             {status === "Upcoming"
               ? "Starts in"
               : status === "Active"
@@ -57,29 +57,37 @@ const ExploreChallengesCard = ({ item }) => {
           {status !== "Past" ? (
             <div className="flex justify-center w-full space-x-2">
               <div className="text-center">
-                <h4>{diff.day}</h4>
-                <p>Days</p>
+                <h4 className="font-poppins text-[18px] font-[600]">
+                  {diff.day}
+                </h4>
+                <p className="font-poppins text-[10px] font-[500]">Days</p>
               </div>
 
               <span>:</span>
 
               <div className="text-center">
-                <h4>{diff.hour}</h4>
-                <p>Hours</p>
+                <h4 className="font-poppins text-[18px] font-[600]">
+                  {diff.hour}
+                </h4>
+                <p className="font-poppins text-[10px] font-[500]">Hours</p>
               </div>
 
               <span>:</span>
 
               <div className="text-center">
-                <h4>{diff.minute}</h4>
-                <p>Mins</p>
+                <h4 className="font-poppins text-[18px] font-[600]">
+                  {diff.minute}
+                </h4>
+                <p className="font-poppins text-[10px] font-[500]">Mins</p>
               </div>
 
               <span>:</span>
 
               <div className="text-center">
-                <h4>{diff.second}</h4>
-                <p>Secs</p>
+                <h4 className="font-poppins text-[18px] font-[600]">
+                  {diff.second}
+                </h4>
+                <p className="font-poppins text-[10px] font-[500]">Secs</p>
               </div>
             </div>
           ) : (
@@ -91,7 +99,7 @@ const ExploreChallengesCard = ({ item }) => {
               className="flex items-center space-x-2 text-white rounded-lg bg-custom-green disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <img src={checkIcon} className="w-5 h-5" alt="Check Icon" />
-              <span>Participate now</span>
+              <span className="font-poppins text-[14px] font-[400]">Participate now</span>
             </button>
           </div>
         </div>

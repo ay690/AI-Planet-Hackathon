@@ -7,7 +7,7 @@ const Header = () => {
     <section className="flex items-center justify-between py-32 mx-auto max-w-7xl h-2/3">
       <div className="w-2/3 space-y-16">
         <div className="space-y-8">
-          <h1 className="font-bold text-white">
+          <h1 className="font-bold leading-normal text-white">
             Accelerate Innovation with Global AI Challenges
           </h1>
           <p className="text-white text-[18px] max-w-lg font-poppins font-[500] ">
@@ -17,7 +17,7 @@ const Header = () => {
           </p>
         </div>
         <button
-          className="font-bold bg-white rounded-lg text-custom-light "
+          className=" bg-white rounded-lg text-custom-light font-poppins font-[600] text-[18px]"
           onClick={() => navigate("/hackathon/admin")}
         >
           Create Challenge
