@@ -1,6 +1,6 @@
 export const items = [
   {
-    label: "Challenge name",
+    label: "Challenge Name",
     name: "title",
     type: "text",
     placeholder: "Enter challenge name",

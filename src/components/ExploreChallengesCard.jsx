@@ -26,28 +26,30 @@ const ExploreChallengesCard = ({ item }) => {
 
   return (
     <Link to={`/hackathon/details/${item.id}`}>
-      <div className="mb-4 overflow-hidden text-center bg-white min-h-[520px] rounded-xl hover:rotate-1">
+      <div className="mb-4 overflow-hidden text-center bg-white min-h-[400px] md:min-h-[520px] rounded-xl hover:rotate-1 transition-transform duration-300">
         <img
           src={item.image}
           alt="card header"
-          className="object-cover w-full h-40 mb-5"
+          className="object-cover w-full h-32 mb-4 md:h-40 md:mb-5"
         />
 
         <button
           className={`${
             status === "Upcoming"
-              ? "text-orange-500 bg-orange-100 rounded-lg p-3"
+              ? "text-orange-500 bg-orange-100 rounded-lg p-2 md:p-3"
               : status === "Active"
-              ? "text-custom-green bg-green-100 rounded-lg p-3"
-              : "text-red-800 bg-red-100 rounded-lg p-3"
-          }`}
+              ? "text-custom-green bg-green-100 rounded-lg p-2 md:p-3"
+              : "text-red-800 bg-red-100 rounded-lg p-2 md:p-3"
+          } text-xs md:text-sm`}
         >
           {status}
         </button>
 
-        <div className="flex flex-col items-center p-8 space-y-4">
-          <h4 className="font-poppins text-[16px] font-[600]">{item.title}</h4>
-          <p className="font-poppins text-[16px] font-[500]">
+        <div className="flex flex-col items-center p-4 space-y-4 md:p-8">
+          <h4 className="text-sm font-semibold font-poppins md:text-base">
+            {item.title}
+          </h4>
+          <p className="text-xs font-medium font-poppins md:text-sm">
             {status === "Upcoming"
               ? "Starts in"
               : status === "Active"
@@ -55,51 +57,65 @@ const ExploreChallengesCard = ({ item }) => {
               : "Ended on"}
           </p>
           {status !== "Past" ? (
-            <div className="flex justify-center w-full space-x-2">
-              <div className="text-center">
-                <h4 className="font-poppins text-[18px] font-[600]">
+            <div className="flex flex-wrap justify-center w-full space-x-2 text-center">
+              <div className="flex flex-col items-center">
+                <h4 className="text-lg font-semibold font-poppins md:text-xl">
                   {diff.day}
                 </h4>
-                <p className="font-poppins text-[10px] font-[500]">Days</p>
+                <p className="text-xs font-medium font-poppins md:text-sm">
+                  Days
+                </p>
               </div>
 
-              <span>:</span>
+              <span className="hidden md:block">:</span>
 
-              <div className="text-center">
-                <h4 className="font-poppins text-[18px] font-[600]">
+              <div className="flex flex-col items-center">
+                <h4 className="text-lg font-semibold font-poppins md:text-xl">
                   {diff.hour}
                 </h4>
-                <p className="font-poppins text-[10px] font-[500]">Hours</p>
+                <p className="text-xs font-medium font-poppins md:text-sm">
+                  Hours
+                </p>
               </div>
 
-              <span>:</span>
+              <span className="hidden md:block">:</span>
 
-              <div className="text-center">
-                <h4 className="font-poppins text-[18px] font-[600]">
+              <div className="flex flex-col items-center">
+                <h4 className="text-lg font-semibold font-poppins md:text-xl">
                   {diff.minute}
                 </h4>
-                <p className="font-poppins text-[10px] font-[500]">Mins</p>
+                <p className="text-xs font-medium font-poppins md:text-sm">
+                  Mins
+                </p>
               </div>
 
-              <span>:</span>
+              <span className="hidden md:block">:</span>
 
-              <div className="text-center">
-                <h4 className="font-poppins text-[18px] font-[600]">
+              <div className="flex flex-col items-center">
+                <h4 className="text-lg font-semibold font-poppins md:text-xl">
                   {diff.second}
                 </h4>
-                <p className="font-poppins text-[10px] font-[500]">Secs</p>
+                <p className="text-xs font-medium font-poppins md:text-sm">
+                  Secs
+                </p>
               </div>
             </div>
           ) : (
-            <h4 className="text-center">{item.endDate}</h4>
+            <h4 className="text-sm text-center md:text-base">{item.endDate}</h4>
           )}
-          <div className="space-x-4">
+          <div className="space-x-2">
             <button
               disabled={status === "Past"}
-              className="flex items-center space-x-2 text-white rounded-lg bg-custom-green disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex items-center px-2 py-1 space-x-2 text-white rounded-lg bg-custom-green disabled:opacity-50 disabled:cursor-not-allowed md:px-4 md:py-2"
             >
-              <img src={checkIcon} className="w-5 h-5" alt="Check Icon" />
-              <span className="font-poppins text-[14px] font-[400]">Participate now</span>
+              <img
+                src={checkIcon}
+                className="w-4 h-4 md:w-5 md:h-5"
+                alt="Check Icon"
+              />
+              <span className="text-xs font-medium font-poppins md:text-sm">
+                Participate now
+              </span>
             </button>
           </div>
         </div>

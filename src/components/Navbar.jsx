@@ -9,7 +9,7 @@ const Navbar = () => {
           <img
             src={Logo}
             alt="logo pic"
-            className="w-auto h-auto"
+            className="w-auto h-auto sm:mx-16 lg:mx-auto "
             loading="lazy"
           />
         </Link>

@@ -1,11 +1,10 @@
-import { useState } from "react";
-import { useRef } from "react";
+import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { items as data } from "../utils/items";
 import { items } from "../data/Admin";
 
 const style =
-  "border px-4 py-2 rounded-sm focus:border-custom-light outline-none w-1/2";
+  "border px-4 py-2 rounded-sm focus:border-custom-light outline-none w-full sm:w-1/2"; // Adjust width based on screen size
 
 const Admin = () => {
   const filePickerRef = useRef(null);
@@ -39,15 +38,15 @@ const Admin = () => {
   };
 
   return (
-    <section className="flex flex-col h-screen ">
-      <div className="py-4 bg-gray-200">
-        <h4 className="max-w-6xl mx-auto font-bold font-inter">
+    <section className="flex flex-col min-h-screen">
+      <div className="px-2 py-4 bg-gray-200">
+        <h4 className="max-w-6xl mx-auto text-lg font-bold font-inter">
           Challenge Details
         </h4>
       </div>
-      <div className="flex-1 py-16 bg-white">
+      <div className="flex-1 py-8 bg-white sm:py-16">
         <form
-          className="grid max-w-6xl grid-cols-1 gap-4 mx-auto"
+          className="grid max-w-6xl grid-cols-1 gap-4 px-4 mx-auto sm:px-0"
           onSubmit={handleSubmit}
         >
           <div className="col-span-1 space-y-8">
@@ -58,7 +57,7 @@ const Admin = () => {
                 </label>
                 {item.type === "select" ? (
                   <select
-                    className={`${style} `}
+                    className={`${style}`}
                     name={item.name}
                     onChange={handleChange}
                   >
@@ -110,16 +109,18 @@ const Admin = () => {
             ))}
           </div>
           <div className="flex flex-col space-y-2">
-            <label>Description</label>
+            <label className="text-[16px] font-inter font-[500]">
+              Description
+            </label>
             <textarea
               name="description"
-              className={`${style} h-full col-span-1 `}
+              className={`${style} h-32 sm:h-full col-span-1 `}
               onChange={handleChange}
             />
           </div>
           <button
             type="submit"
-            className="text-white rounded-lg w-fit bg-custom-green"
+            className="px-6 py-2 mx-auto text-white bg-green-500 rounded-lg sm:w-fit"
           >
             Create challenge
           </button>
