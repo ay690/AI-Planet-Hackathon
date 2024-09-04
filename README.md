@@ -1,5 +1,9 @@
 ## AI Planet Hackathon
 
+# Link:
+
+https://ai-planet-hackathon.netlify.app/hackathon
+
 # Snippets
 
 <img src="./src/snippets/Header.png" />
