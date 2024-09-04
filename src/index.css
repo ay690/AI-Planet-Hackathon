@@ -1,3 +1,72 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+@layer components {
+  h1 {
+    @apply relative font-mono text-6xl leading-tight text-white before:absolute before:w-4 before:h-full before:bg-yellow-400 before:-left-10;
+  }
+
+  h2 {
+    @apply font-mono text-4xl font-medium text-center;
+  }
+
+  h4 {
+    @apply font-mono text-xl font-semibold;
+  }
+
+  p,
+  label,
+  input,
+  textarea,
+  select {
+    @apply text-sm font-normal leading-relaxed;
+  }
+
+  button {
+    @apply px-6 py-3 text-sm font-medium rounded-sm hover:rotate-3;
+  }
+}
+
+@layer utilities {
+  @variants responsive {
+    .masonry-3-col {
+      column-count: 3;
+      column-gap: 1em;
+    }
+    .masonry-2-col {
+      column-count: 2;
+      column-gap: 1em;
+    }
+    .break-inside {
+      break-inside: avoid;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar:hover {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #374151;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fde047;
+}
