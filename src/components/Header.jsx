@@ -10,7 +10,7 @@ const Header = () => {
             Accelerate Innovation with Global AI Challenges
           </h1>
           <p className="text-white text-[18px] max-w-lg font-poppins">
-            AI Challenges at asity simulate real-world problems. It is a great
+            AI Challenges at DPhi simulate real-world problems. It is a great
             place to put your AI/Data Science skills to test on diverse datasets
             allowing you to foster learning through competitions.
           </p>
