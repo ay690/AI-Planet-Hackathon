@@ -1,6 +1,5 @@
-import Layout from "./components/Layout";
-import Home from "./pages/Home";
-import Error from "./pages/Error";
+import { Layout, ChallengeDetails } from "./components/index";
+import { Home, Admin, Error } from "./pages/index";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 
 function App() {
@@ -9,6 +8,8 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/hackathon" element={<Home />} />
+          <Route path="/hackathon/admin" element={<Admin />} />
+          <Route path="/hackathon/details/:id" element={<ChallengeDetails />} />
           <Route path="/hackathon/*" element={<Error />} />
         </Routes>
       </Layout>

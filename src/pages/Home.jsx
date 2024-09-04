@@ -1,4 +1,9 @@
-import { Header, Statistics, WhyParticipate } from "../components/index";
+import {
+  Header,
+  Statistics,
+  WhyParticipate,
+  ExploreChallenges,
+} from "../components/index";
 
 const Home = () => {
   return (
@@ -6,6 +11,7 @@ const Home = () => {
       <Header />
       <Statistics />
       <WhyParticipate />
+      <ExploreChallenges />
     </div>
   );
 };
